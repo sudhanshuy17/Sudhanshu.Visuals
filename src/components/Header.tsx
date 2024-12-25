@@ -16,7 +16,7 @@ export const Header = () => {
               />
             </AspectRatio>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight">sudhanshu.visuals</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Sudhanshu.Visuals</h1>
         </div>
         <nav className="flex gap-6">
           <Button variant="ghost" size="icon" asChild>
