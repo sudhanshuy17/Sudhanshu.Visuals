@@ -1,4 +1,6 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Facebook, Instagram, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   return (
@@ -17,9 +19,21 @@ export const Header = () => {
           <h1 className="text-3xl font-bold tracking-tight">sudhanshu.visuals</h1>
         </div>
         <nav className="flex gap-6">
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Facebook</a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="#" aria-label="Instagram">
+              <Instagram className="w-5 h-5" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="#" aria-label="Facebook">
+              <Facebook className="w-5 h-5" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="#" aria-label="Contact">
+              <Mail className="w-5 h-5" />
+            </a>
+          </Button>
         </nav>
       </div>
     </header>
