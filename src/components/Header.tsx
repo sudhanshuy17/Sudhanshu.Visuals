@@ -20,7 +20,7 @@ export const Header = () => {
         </div>
         <nav className="flex gap-6">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/p/DD6YzfYPiWH/?igsh=MTNzMXJkbXBnMGtraQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram className="w-5 h-5" />
             </a>
           </Button>
