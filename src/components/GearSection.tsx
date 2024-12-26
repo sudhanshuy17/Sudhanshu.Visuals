@@ -68,12 +68,12 @@ export const GearSection = () => {
     },
   };
 
-  // Updated images array with the new camera pictures
+  // Updated images array with all four camera pictures
   const images = [
     "/lovable-uploads/b6c89444-6af4-4720-a637-8efa4bee6549.png",
     "/lovable-uploads/4210b3a9-f449-4cc0-a2c4-4098989f789f.png",
-    "/placeholder.svg",
-    "/placeholder.svg",
+    "/lovable-uploads/ce605a5c-695e-46b2-9b73-58237ceabe61.png",
+    "/lovable-uploads/9ee4fa67-786c-41fd-b9f1-e15d440114e7.png",
   ];
 
   return (
