@@ -68,10 +68,10 @@ export const GearSection = () => {
     },
   };
 
-  // Placeholder images that will be replaced with actual camera pictures
+  // Updated images array with the new camera pictures
   const images = [
-    "/placeholder.svg",
-    "/placeholder.svg",
+    "/lovable-uploads/b6c89444-6af4-4720-a637-8efa4bee6549.png",
+    "/lovable-uploads/4210b3a9-f449-4cc0-a2c4-4098989f789f.png",
     "/placeholder.svg",
     "/placeholder.svg",
   ];
