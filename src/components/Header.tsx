@@ -25,12 +25,12 @@ export const Header = () => {
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/19WJ3TcevM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <Facebook className="w-5 h-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="Contact">
+            <a href="mailto:officesudhanshu17@gmail.com" aria-label="Contact">
               <Mail className="w-5 h-5" />
             </a>
           </Button>
