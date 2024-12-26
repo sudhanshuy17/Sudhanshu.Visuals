@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { AchievementsSection } from "@/components/AchievementsSection";
 import { GearSection } from "@/components/GearSection";
+import { CollaborationSection } from "@/components/CollaborationSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <ExpertiseSection />
         <AchievementsSection />
         <GearSection />
+        <CollaborationSection />
         <footer className="text-center py-8 text-sm text-muted-foreground">
           © 2024 Sudhanshu.Visuals. All rights reserved.
         </footer>
