@@ -1,5 +1,12 @@
 import { Card, CardContent } from "./ui/card";
 import { Camera } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const GearSection = () => {
   const gear = {
@@ -61,11 +68,51 @@ export const GearSection = () => {
     },
   };
 
+  // Placeholder images that will be replaced with actual camera pictures
+  const images = [
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+  ];
+
   return (
     <section className="animate-fadeIn">
       <Card className="bg-secondary/50">
         <CardContent className="p-6">
           <h2 className="text-3xl font-bold mb-8">My Gear</h2>
+
+          {/* Image Carousel */}
+          <div className="mb-8">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {images.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="overflow-hidden">
+                        <CardContent className="p-0">
+                          <img
+                            src={image}
+                            alt={`Camera ${index + 1}`}
+                            className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             {/* Sony System */}
             <div>
