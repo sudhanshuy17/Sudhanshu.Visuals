@@ -13,7 +13,7 @@ export const CollaborationSection = () => {
         <CardContent className="p-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Let's Collaborate</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            I'm open to exciting photography projects and collaborations. Whether you have a creative vision or need professional photography services, I'd love to hear from you.
+            I invite you to collaborate with me on photography and videography projects. If you have a creative vision or require professional services in these areas, my team of experienced professionals is available to assist. I'd love to hear from you.
           </p>
           <Button 
             onClick={handleContactClick}

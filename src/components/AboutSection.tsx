@@ -7,7 +7,7 @@ export const AboutSection = () => {
         <CardContent className="p-6 space-y-6">
           <h2 className="text-3xl font-bold mb-6">About Me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            As a passionate photographer and cinematographer, I find my greatest inspiration in the raw beauty of the natural world. Wildlife photography isn't just my profession—it's my calling, a medium through which I connect with nature's most extraordinary moments.
+            As a passionate photographer and cinematographer, I find my greatest inspiration in the raw beauty of the natural world. Wildlife photography isn't just my passion—it's my calling, a medium through which I connect with nature's most extraordinary moments.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             My journey began with a simple fascination for wildlife, but it has evolved into a dedicated mission to document and share the incredible stories of our planet's diverse ecosystems and their inhabitants.

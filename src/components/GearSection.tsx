@@ -53,15 +53,15 @@ export const GearSection = () => {
       ],
       lenses: [
         {
-          name: "35mm Prime Lens",
+          name: "NIKKOR 35mm f/1.8G Lens",
           type: "Prime Lens",
         },
         {
-          name: "18-105mm Nikkor",
+          name: "18-105mm f/3.5-5.6G AF-S DX Nikkor ED VR Lens",
           type: "Standard Zoom",
         },
         {
-          name: "70-300mm Tamron",
+          name: "Tamron 70-300mm f/4.5-6.3 Di III RXD Lens",
           type: "Telephoto Zoom",
         },
       ],
