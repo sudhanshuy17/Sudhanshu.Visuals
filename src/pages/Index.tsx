@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { PortfolioGrid } from "@/components/PortfolioGrid";
 import { AboutSection } from "@/components/AboutSection";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
-import { AchievementsSection } from "@/components/AchievementsSection";
 import { GearSection } from "@/components/GearSection";
 import { CollaborationSection } from "@/components/CollaborationSection";
 
@@ -14,7 +13,6 @@ const Index = () => {
         <AboutSection />
         <PortfolioGrid />
         <ExpertiseSection />
-        <AchievementsSection />
         <GearSection />
         <CollaborationSection />
         <footer className="text-center py-8 text-sm text-muted-foreground">
