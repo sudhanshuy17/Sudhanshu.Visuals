@@ -148,14 +148,14 @@ export const PortfolioGrid = () => {
     <div className="container mx-auto px-4 py-12">
       <Carousel
         opts={{
-          align: "start",
+          align: "center",
           loop: true,
         }}
-        className="w-full"
+        className="w-full max-w-xl mx-auto"
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent>
           {portfolioItems.map((item, index) => (
-            <CarouselItem key={item.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={item.id} className="basis-full">
               <Card 
                 className="group overflow-hidden bg-secondary border-none animate-fadeIn hover:scale-[1.02] transition-transform duration-300"
                 style={{ 
@@ -189,8 +189,8 @@ export const PortfolioGrid = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:flex -left-12" />
-        <CarouselNext className="hidden md:flex -right-12" />
+        <CarouselPrevious className="-left-12" />
+        <CarouselNext className="-right-12" />
       </Carousel>
     </div>
   );
