@@ -6,7 +6,7 @@ const portfolioItems = [
     id: 1,
     title: "Wildlife Photography",
     description: "Bengal Tiger in natural habitat",
-    image: "/lovable-uploads/5088fe4b-b4c8-413b-85af-246ebf85699c.png",
+    image: "/lovable-uploads/45e6b30c-9ab7-47b7-bdf7-8f657bc3d98f.png",
   },
   {
     id: 2,
