@@ -141,21 +141,29 @@ export const PortfolioGrid = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {portfolioItems.map((item) => (
-          <Card key={item.id} className="group overflow-hidden bg-secondary border-none animate-fadeIn">
+        {portfolioItems.map((item, index) => (
+          <Card 
+            key={item.id} 
+            className="group overflow-hidden bg-secondary border-none animate-fadeIn hover:scale-[1.02] transition-transform duration-300"
+            style={{ 
+              animationDelay: `${index * 150}ms`,
+              opacity: 0,
+              animation: `fadeIn 0.5s ease-in-out ${index * 150}ms forwards`
+            }}
+          >
             <CardContent className="p-0">
               <AspectRatio ratio={3/4}>
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
-                    <div className="flex gap-3 text-xs text-muted-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="text-lg font-semibold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">{item.description}</p>
+                    <div className="flex gap-3 text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
                       <span>{item.metadata.iso}</span>
                       <span>{item.metadata.shutterSpeed}</span>
                       <span>{item.metadata.aperture}</span>
