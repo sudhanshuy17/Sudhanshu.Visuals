@@ -1,5 +1,3 @@
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -7,8 +5,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { CarouselPortfolioItem } from "./portfolio/CarouselPortfolioItem";
+import { PortfolioItem } from "./portfolio/types";
 
-const portfolioItems = [
+const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: "Wildlife Photography",
@@ -143,13 +143,6 @@ const portfolioItems = [
   }
 ];
 
-type MediaType = 'image' | 'video';
-
-const getMediaType = (url: string): MediaType => {
-  const extension = url.split('.').pop()?.toLowerCase();
-  return ['mp4', 'webm', 'ogg'].includes(extension || '') ? 'video' : 'image';
-};
-
 export const PortfolioGrid = () => {
   return (
     <div className="container mx-auto px-4 py-12">
@@ -163,46 +156,7 @@ export const PortfolioGrid = () => {
         <CarouselContent>
           {portfolioItems.map((item, index) => (
             <CarouselItem key={item.id} className="basis-full">
-              <Card 
-                className="group overflow-hidden bg-secondary border-none animate-fadeIn hover:scale-[1.02] transition-transform duration-300"
-                style={{ 
-                  animationDelay: `${index * 150}ms`,
-                  opacity: 0,
-                  animation: `fadeIn 0.5s ease-in-out ${index * 150}ms forwards`
-                }}
-              >
-                <CardContent className="p-0">
-                  <AspectRatio ratio={16/9}>
-                    {getMediaType(item.image) === 'video' ? (
-                      <video
-                        src={item.image}
-                        className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
-                        controls
-                        playsInline
-                        preload="metadata"
-                      />
-                    ) : (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
-                        loading="lazy"
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                      <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 className="text-lg font-semibold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">{item.description}</p>
-                        <div className="flex gap-3 text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
-                          <span>{item.metadata.iso}</span>
-                          <span>{item.metadata.shutterSpeed}</span>
-                          <span>{item.metadata.aperture}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </AspectRatio>
-                </CardContent>
-              </Card>
+              <CarouselPortfolioItem item={item} index={index} />
             </CarouselItem>
           ))}
         </CarouselContent>
