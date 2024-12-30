@@ -172,7 +172,7 @@ export const PortfolioGrid = () => {
                 }}
               >
                 <CardContent className="p-0">
-                  <AspectRatio ratio={3/4}>
+                  <AspectRatio ratio={16/9}>
                     {getMediaType(item.image) === 'video' ? (
                       <video
                         src={item.image}
