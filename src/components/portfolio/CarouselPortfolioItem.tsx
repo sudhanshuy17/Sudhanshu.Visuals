@@ -1,6 +1,7 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent } from "@/components/ui/card";
 import { PortfolioItem } from "./types";
+import { PortfolioItemOverlay } from "./PortfolioItemOverlay";
 
 interface CarouselPortfolioItemProps {
   item: PortfolioItem;
