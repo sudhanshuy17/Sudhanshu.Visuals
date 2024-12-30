@@ -100,7 +100,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 9,
     title: "Macro Photography",
-    description: "Dewdrops on green leaf",
+    description: "Close-up of an insect",
     image: "/lovable-uploads/ea4b0675-18c5-4808-b597-b356a94d8ade.png",
     metadata: {
       iso: "ISO 200",
