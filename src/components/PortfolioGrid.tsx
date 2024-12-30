@@ -143,6 +143,13 @@ const portfolioItems = [
   }
 ];
 
+type MediaType = 'image' | 'video';
+
+const getMediaType = (url: string): MediaType => {
+  const extension = url.split('.').pop()?.toLowerCase();
+  return ['mp4', 'webm', 'ogg'].includes(extension || '') ? 'video' : 'image';
+};
+
 export const PortfolioGrid = () => {
   return (
     <div className="container mx-auto px-4 py-12">
@@ -166,12 +173,22 @@ export const PortfolioGrid = () => {
               >
                 <CardContent className="p-0">
                   <AspectRatio ratio={3/4}>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
-                      loading="lazy"
-                    />
+                    {getMediaType(item.image) === 'video' ? (
+                      <video
+                        src={item.image}
+                        className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
+                        controls
+                        playsInline
+                        preload="metadata"
+                      />
+                    ) : (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                       <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                         <h3 className="text-lg font-semibold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.title}</h3>
